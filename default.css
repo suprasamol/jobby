@@ -175,6 +175,7 @@
 		padding: 1em 2em 1em 2em;
 		letter-spacing: 0.10em;
 		margin-top: 2em;
+		margin-bottom: 2em;
 		padding: 1.40em 3em;
 		background: #f3cc2f;
 		border-radius: 6px;
@@ -263,11 +264,7 @@
 /* Heading Titles                                                                */
 /*********************************************************************************/
 
-	.title
-	{
-		margin-bottom: 3em;
-	}
-	
+ด
 	.title h2
 	{
 		font-size: 2.7em;
@@ -484,7 +481,7 @@
 	#welcome
 	{
 		position: relative;
-		padding: 7em 0em 7em 0em;
+		/* padding: 7em 0em 7em 0em; */
 		background: #f3cc2f;
 		background-size: cover;
 		text-align: center;
