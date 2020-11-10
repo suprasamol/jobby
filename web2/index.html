@@ -33,7 +33,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 /* Slides */
 .mySlides {
   display: none;
-  padding: 80px;
+  padding: 35px;
   text-align: center;
 }
 
@@ -94,6 +94,18 @@ q {font-style: italic;}
 
 /* Add a blue color to the author */
 .author {color: cornflowerblue;}
+
+ul.demo {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li {
+  text-align: left;
+  margin-left: 50%;
+}
 </style>
 </head>
 
@@ -144,11 +156,13 @@ q {font-style: italic;}
       <div class="mySlides">
         <h3><p class="author">1.คุณมักเป็นผู้ริเริ่มเสมอ ในสถานการณ์ทางสังคม</p></h3>
         <span>
-          <input type="radio" id="rd1-1" name="ans1" value="1"><label for="rd1-1">&nbsp;น้อยที่สุด</label>&nbsp;
-          <input type="radio" id="rd1-2" name="ans1" value="2"><label for="rd1-2">&nbsp;น้อย</label>&nbsp;
-          <input type="radio" id="rd1-3" name="ans1" value="3"><label for="rd1-3">&nbsp;ปานกลาง</label>&nbsp;
-          <input type="radio" id="rd1-4" name="ans1" value="4"><label for="rd1-4">&nbsp;มาก</label>&nbsp;
-          <input type="radio" id="rd1-5" name="ans1" value="5"><label for="rd1-5">&nbsp;มากที่สุด</label>
+          <ul class="demo">
+            <li><input type="radio" id="rd1-1" name="ans1" value="1"><label for="rd1-1">&nbsp;น้อยที่สุด</label></li>
+            <li><input type="radio" id="rd1-2" name="ans1" value="2"><label for="rd1-2">&nbsp;น้อย</label></li>
+            <li><input type="radio" id="rd1-3" name="ans1" value="3"><label for="rd1-3">&nbsp;ปานกลาง</label></li>
+            <li><input type="radio" id="rd1-4" name="ans1" value="4"><label for="rd1-4">&nbsp;มาก</label></li>
+            <li><input type="radio" id="rd1-5" name="ans1" value="5"><label for="rd1-5">&nbsp;มากที่สุด</label></li>
+          </ul>
         </span>
       </div>
 
