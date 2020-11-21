@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stylish Portfolio - Start Bootstrap Template</title>
+  <title>Jobby</title>
 
 
 <style>
@@ -123,19 +123,43 @@ img {
   cursor: pointer;
 }
 
-.button1 {background-color: #ffd30a; width: 80%;} /* Green */
+.button1 {background-color: #ffd30a; width: 80%;} /* Yellow Jobby */
 .button2 {background-color: #008CBA; width: 80%;} /* Blue */
+
+input {
+    margin: .4rem;
+}
 </style>
 </head>
 <body>
+  <table style="width: 100%" style="display: none;">
+    <tbody style="display:none">
+      <tr>
+      <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+      <td>&nbsp;&nbsp;ต้องการให้ Jobby ช่วยอะไรครับ</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2"><center><a href="https://www.jobtopgun.com/"><button class="button button1">ต้องการหางาน</button></a></center></td>
+      </tr>
+      <tr>
+        <td colspan="2"><center><button class="button button1">ต้องการค้นหาตัวเอง</button></center></td>
+      </tr>
+    </tbody>
+  </table>
+
   <table style="width: 100%">
     <tr>
       <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
-      <td>&nbsp;&nbsp;ต้องการให้ Jobby ช่วยอะไรครับ</td>
+      <td>&nbsp;&nbsp;1.คุณมักเป็นผู้ริเริ่มเสมอ ในสถานการณ์ทางสังคม</td>
     </tr>
     <tr><td><p></p></td></tr>
     <tr>
-      <td colspan="2"><center><a href="https://www.jobtopgun.com/"><button class="button button1">ต้องการหางาน</button></a></center></td>
+      <td colspan="2">
+        <center>
+          น้อยที่สุด<input type="range" id="q1" name="q1" min="0" max="100" value="0" step="25" />มากที่สุด
+        </center>
+      </td>
     </tr>
     <tr>
       <td colspan="2"><center><button class="button button1">ต้องการค้นหาตัวเอง</button></center></td>
