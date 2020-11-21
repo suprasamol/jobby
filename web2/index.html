@@ -124,16 +124,16 @@ img {
 }
 
 .button1 {background-color: #ffd30a; width: 80%;} /* Yellow Jobby */
-.buttonNext {background-color: #ffd30a; width: 150px; float: right;} 
-
+.buttonNext {background-color: #ffd30a; width: 100px; float: right;} 
+.buttonPrev {background-color: #ffd30a; width: 100px; float: left;} 
 input {
     margin: .4rem;
 }
 </style>
 </head>
 <body>
-  <table style="width: 100%" style="display: none;">
-    <tbody style="display:none">
+  <table style="width: 100%">
+    <tbody id="index">
       <tr>
       <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
       <td>&nbsp;&nbsp;ต้องการให้ Jobby ช่วยอะไรครับ</td>
@@ -143,37 +143,44 @@ input {
         <td colspan="2"><center><a href="https://www.jobtopgun.com/"><button class="button button1">ต้องการหางาน</button></a></center></td>
       </tr>
       <tr>
-        <td colspan="2"><center><button class="button button1">ต้องการค้นหาตัวเอง</button></center></td>
+        <td colspan="2"><center><button class="button button1" onclick="nextQuestion('index'); nextQuestion('q1')">ต้องการค้นหาตัวเอง</button></center></td>
       </tr>
     </tbody>
   </table>
 
   <table style="width: 100%">
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
-      <td>&nbsp;&nbsp;1.คุณมักเป็นผู้ริเริ่มเสมอ ในสถานการณ์ทางสังคม</td>
-    </tr>
-    <tr><td><p></p></td></tr>
-    <tr>
-      <td colspan="2">
-        <center>
-          น้อยที่สุด<input type="range" id="q1" name="q1" min="0" max="100" value="0" step="25" />มากที่สุด
-        </center>
-      </td>
-    </tr>
-    <tr><td><p></p></td></tr>
-    <tr>
-      <td></td>
-      <td><button class="button buttonNext">ถัดไป</button></center></td>
+    <tbody id="q1" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;1.คุณมักเป็นผู้ริเริ่มเสมอ ในสถานการณ์ทางสังคม</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q1" name="q1" min="0" max="100" value="0" step="25" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></center></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('q1')"">></button></center></td>
 
-    </tr>
+      </tr>
+    </tbody>
   </table>
-    
-
-  
-</body>
-
-
+  <script>
+  function nextQuestion(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
 </body>
 
 </html>
