@@ -129,6 +129,41 @@ img {
 input {
     margin: .4rem;
 }
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 10px;
+  border-radius: 5px;
+  background: #0c45a6;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffd30a;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffd30a;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -143,13 +178,11 @@ input {
         <td colspan="2"><center><a href="https://www.jobtopgun.com/"><button class="button button1">ต้องการหางาน</button></a></center></td>
       </tr>
       <tr>
-        <td colspan="2"><center><button class="button button1" onclick="nextQuestion('index'); nextQuestion('q1')">ต้องการค้นหาตัวเอง</button></center></td>
+        <td colspan="2"><center><button class="button button1" onclick="nextQuestion('index'); nextQuestion('tb1')">ต้องการค้นหาตัวเอง</button></center></td>
       </tr>
     </tbody>
-  </table>
 
-  <table style="width: 100%">
-    <tbody id="q1" style="display: none;">
+    <tbody id="tb1" style="display: none;">
       <tr>
         <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
         <td>&nbsp;&nbsp;1.คุณมักเป็นผู้ริเริ่มเสมอ ในสถานการณ์ทางสังคม</td>
@@ -158,19 +191,209 @@ input {
       <tr>
         <td colspan="2">
           <center>
-            น้อยที่สุด<input type="range" id="q1" name="q1" min="0" max="100" value="0" step="25" />มากที่สุด
+            น้อยที่สุด<input type="range" id="q1" name="q1" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
           </center>
         </td>
       </tr>
       <tr><td><p></p></td></tr>
       <tr><td><p></p></td></tr>
       <tr>
-        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></center></td>
-        <td><button class="button buttonNext" onclick="nextQuestion('q1')"">></button></center></td>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb1'); nextQuestion('tb2')">></button></td>
+      </tr>
+    </tbody>
 
+    <tbody id="tb2" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;2.คุณคิดว่าการวางแผนส่วนตัวและทำตามแผนนั้นเป็นเรื่องไม่ยาก</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q2" name="q2" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb2'); nextQuestion('tb3')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb3" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;3.การมีทางเลือกหลายทางนั้นสำคัญกว่ามีรายการสิ่งที่ต้องทำ</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q3" name="q3" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb3'); nextQuestion('tb4')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb4" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;4.ตรรกะมักสำคัญกว่าจิตใจเมื่อต้องตัดสินใจเรื่องสำคัญ ๆ</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q4" name="q4" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb4'); nextQuestion('tb5')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb5" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;5.คุณมักจะทำตามสัญชาตญาณมากกว่าวางแผนอย่างละเอียด</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q5" name="q5" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb5'); nextQuestion('tb6')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb6" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;6.คุณเป็นคนทำอะไรตามสถานการณ์มากกว่าเป็นนักวางแผนที่รอบคอบ</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q6" name="q6" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb6'); nextQuestion('tb7')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb7" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;7.คุณสามารถเข้าร่วมกิจกรรมสังคมต่าง ๆ ในที่ทำงานใหม่ได้ในเวลาไม่นาน</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q7" name="q7" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb7'); nextQuestion('tb8')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb8" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;8.สไตล์การทำงานของคุณนั้นจะมีความกระตือรือร้นเป็นช่วง ๆ มากกว่าการดำเนินตามแบบแผนและเป็นไปอย่างมีระบบ</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q8" name="q8" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb8'); nextQuestion('tb9')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb9" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;9.คุณมักพบกว่าเป็นเรื่องยากที่จะผ่อนคลายเมื่อต้องพูดต่อหน้าคนจำนวนมาก</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q9" name="q9" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb9'); nextQuestion('tb10')">></button></td>
+      </tr>
+    </tbody>
+
+    <tbody id="tb10" style="display: none;">
+      <tr>
+        <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:70px;"></td>
+        <td>&nbsp;&nbsp;10.คุณแทบจะไม่ลงมือทำอะไรที่อยู่นอกเหนือความสงสัยใคร่รู้</td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td colspan="2">
+          <center>
+            น้อยที่สุด<input type="range" id="q10" name="q10" min="1" max="5" value="0" step="1" class="slider" />มากที่สุด
+          </center>
+        </td>
+      </tr>
+      <tr><td><p></p></td></tr>
+      <tr><td><p></p></td></tr>
+      <tr>
+        <td><button class="button buttonPrev" onclick="nextQuestion('index')"><</button></td>
+        <td><button class="button buttonNext" onclick="nextQuestion('tb10');">ส่งคำตอบ</button></td>
       </tr>
     </tbody>
   </table>
+
+  <button class="button buttonNext" onclick="showResult('q1')" style="display: none;">Show Result</button>
   <script>
   function nextQuestion(id) {
     var x = document.getElementById(id);
@@ -180,7 +403,14 @@ input {
       x.style.display = "none";
     }
   }
-</script>
+  function showResult(id){
+    var x = document.getElementById(id).value;
+    alert(x);
+  }
+  </script>
+
+
+
 </body>
 
 </html>
