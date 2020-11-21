@@ -117,14 +117,40 @@ img {
   align-items: center;
   height: 200px;
   border: 3px solid blue; 
-  
+
 }
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50; width: 80%;} /* Green */
+.button2 {background-color: #008CBA; width: 80%;} /* Blue */
 </style>
 </head>
 <body>
-  <div class="center">
-    <img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:100px">  
-  </div>
+  <table style="width: 100%">
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/suprasamol/jobby/main/web2/img/jobby.jpg" alt="Avatar" style="width:100px"></td>
+      <td>&nbsp;&nbsp;ต้องการให้ Jobby ช่วยอะไรครับ</td>
+    </tr>
+    <tr>
+      <td colspan="2"><center><button class="button button1">Green</button></center></td>
+    </tr>
+    <tr>
+      <td colspan="2"><center><button class="button button2">Blue</button></center></td>
+    </tr>
+  </table>
+    
+
   
 </body>
 <body id="page-top"> 
